@@ -3,7 +3,7 @@ This project implements an end-to-end data pipeline that ingests Nigerian energy
 
 ## Purpose & Motivation
 
-* The Nigerian electricity and utilities sector faces challenges such as low collection efficiency, estimated billing instead of metered billing, disparities between billed vs collected amounts, and revenue losses. Public reports indicate large shortfalls between energy billed and what’s collected. (See e.g. NERC reports, ~ 70-80% billing efficiency in many quarters, rising estimated billing, etc.)  https://nairametrics.com/2022/09/25/discos-collected-n210-billion-out-of-n303-billion-billed-to-customers-in-q4-2021
+* The Nigerian electricity and utilities sector faces challenges such as low collection efficiency, estimated billing instead of metered billing, disparities between billed vs collected amounts, and revenue losses. Public reports indicate large shortfalls between energy billed and what’s collected. (See e.g. NERC reports, ~ 70-80% billing efficiency in many quarters, rising estimated billing, etc.) [Nairametrics](https://nairametrics.com/2022/09/25/discos-collected-n210-billion-out-of-n303-billion-billed-to-customers-in-q4-2021)
 
 * Accurate, timely data about billing vs payments is essential to identify inefficiencies, make data-driven policy/regulatory decisions, monitor performance of distribution companies (DisCos), and help improve revenue flows.
 
