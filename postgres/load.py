@@ -13,10 +13,8 @@ df = pd.read_parquet("https://huggingface.co/datasets/electricsheepafrica/nigeri
 
 df.to_csv("nigerian_energy_and_utilities_billing_payments.csv")
 
-df[['year', 'month']] = df['billing_month'].str.split('-', expand=True)
-
 df.to_sql(
-    name='ene',
+    name='energy_billing',
     con=engine,
     if_exists='replace', 
     index=False
