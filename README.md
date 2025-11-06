@@ -150,23 +150,18 @@ touch extract/extract.py transform/transform.py load/load.py
 ```
 energy_billing/
 │
-├── extract/
+├── extractor/
 │   └── extract.py           # Data extraction from Hugging Face
 │
-├── transform/
+├── transformer/
 │   └── transform.py         # Data transformation and cleaning
 │
-├── load/
+├── postgres/
 │   └── load.py             # Data loading into PostgreSQL
 │
-├── data/
-│   ├── raw/                # Raw parquet files
-│   └── processed/          # Transformed CSV files
-│
-├── .env                    # Environment variables (gitignored)
+│       
 ├── .gitignore
-├── requirements.txt        # Python dependencies
-└── README.md              # This file
+└── README.md            
 ```
 
 ---
