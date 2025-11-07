@@ -1,12 +1,13 @@
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
-# extract csv file using url
+load_dotenv()
 
-df = pd.read_parquet("https://huggingface.co/datasets/electricsheepafrica/nigerian_energy_and_utilities_billing_payments/resolve/main/nigerian_energy_and_utilities_billing_payments.parquet")
+api_url = os.getenv('API_URL')
 
-df.shape
+# Load data from the API URL
+df = pd.read_parquet(api_url) 
 
-# print top 20 rows in the table and coulumns in the dataframe
-
-print(df. head(20))
-print(df.columns)
+# Print top 20 rows in the table and columns in the dataframe
+print(df.head(20))

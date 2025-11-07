@@ -1,7 +1,12 @@
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
-# load existing data 
-df = pd.read_parquet("https://huggingface.co/datasets/electricsheepafrica/nigerian_energy_and_utilities_billing_payments/resolve/main/nigerian_energy_and_utilities_billing_payments.parquet")
+load_dotenv()
+
+api_url = os.getenv('API_URL')
+
+df = pd.read_parquet(api_url)
 
 # covert file from parquet to csv 
 df.to_csv("nigerian_energy_and_utilities_billing_payments.csv")

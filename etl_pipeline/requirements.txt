@@ -1,2 +1,4 @@
-pandas==2.3.2
-datasets
+pandas==2.2.3
+datasets==2.19.0
+sqlalchemy==2.0.29
+python-dotenv==1.0.1
