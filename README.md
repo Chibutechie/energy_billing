@@ -41,8 +41,7 @@ Successfully extract, transform, and load data from source to data warehouse wit
 
 ## Architecture
 
-![alt text](image-1.png)
----
+![Pipeline Architecture](assests/image-1.png)
 
 ## Dataset
 
@@ -50,30 +49,30 @@ Successfully extract, transform, and load data from source to data warehouse wit
 
 ### Schema
 
-| Column | Type | Description |
-|--------|------|-------------|
-| `customer_id` | String | Unique identifier for each customer |
-| `disco` | String | Distribution Company name |
-| `billing_month` | String | Month and year of billing cycle |
-| `tariff_band` | String | Customer tariff classification |
-| `kwh` | Float | Kilowatt-hours consumed |
-| `price_ngn_kwh` | Float | Price per kWh in Nigerian Naira |
-| `amount_billed_ngn` | Float | Total amount billed |
-| `amount_paid_ngn` | Float | Total amount paid by customer |
-| `paid_on_time` | Boolean | Payment timeliness indicator |
-| `arrears_ngn` | Float | Outstanding arrears amount |
+| Column              | Type    | Description                         |
+| ------------------- | ------- | ----------------------------------- |
+| `customer_id`       | String  | Unique identifier for each customer |
+| `disco`             | String  | Distribution Company name           |
+| `billing_month`     | String  | Month and year of billing cycle     |
+| `tariff_band`       | String  | Customer tariff classification      |
+| `kwh`               | Float   | Kilowatt-hours consumed             |
+| `price_ngn_kwh`     | Float   | Price per kWh in Nigerian Naira     |
+| `amount_billed_ngn` | Float   | Total amount billed                 |
+| `amount_paid_ngn`   | Float   | Total amount paid by customer       |
+| `paid_on_time`      | Boolean | Payment timeliness indicator        |
+| `arrears_ngn`       | Float   | Outstanding arrears amount          |
 
 ---
 
 ## Technologies
 
-| Technology | Purpose |
-|-----------|---------|
-| **[Python 3.x](https://www.python.org/downloads/)** | Core programming language |
-| **[Pandas](https://pandas.pydata.org/)** | Data manipulation and analysis |
-| **[SQLAlchemy](https://www.sqlalchemy.org/)** | Database ORM and connection management |
-| **[PostgreSQL](https://www.postgresql.org/)** | Data warehouse and analytics database |
-| **[python-dotenv](https://pypi.org/project/python-dotenv/)** | Environment variable management |
+| Technology                                                   | Purpose                                |
+| ------------------------------------------------------------ | -------------------------------------- |
+| **[Python 3.x](https://www.python.org/downloads/)**          | Core programming language              |
+| **[Pandas](https://pandas.pydata.org/)**                     | Data manipulation and analysis         |
+| **[SQLAlchemy](https://www.sqlalchemy.org/)**                | Database ORM and connection management |
+| **[PostgreSQL](https://www.postgresql.org/)**                | Data warehouse and analytics database  |
+| **[python-dotenv](https://pypi.org/project/python-dotenv/)** | Environment variable management        |
 
 ---
 
@@ -81,8 +80,8 @@ Successfully extract, transform, and load data from source to data warehouse wit
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- PostgreSQL 12 or higher
+- Python 3.8
+- PostgreSQL 18
 - Git
 
 ### Installation
@@ -92,7 +91,7 @@ Successfully extract, transform, and load data from source to data warehouse wit
 ```bash
 mkdir energy_billing
 cd energy_billing
-````
+```
 
 #### 2. Set Up Virtual Environment
 
@@ -115,10 +114,10 @@ pip install -r requirements.txt
 **requirements.txt**
 
 ```txt
-python-dotenv==1.0.0
-pandas==2.0.0
-sqlalchemy==2.0.0
-psycopg2-binary==2.9.9
+pandas==2.2.3
+datasets==2.19.0
+sqlalchemy==2.0.36
+python-dotenv==1.0.1
 ```
 
 #### 4. Configure Environment Variables
@@ -132,52 +131,41 @@ PG_PASSWORD=yourpassword
 PG_HOST=localhost
 PG_PORT=5432
 PG_DATABASE=energydb
+
 ```
+
+API_URL=https://huggingface.co/datasets/electricsheepafrica/nigerian_energy_and_utilities_billing_payments/resolve/main/nigerian_energy_and_utilities_billing_payments.parquet
+
+````
 
 >  **Security Note**: Add `.env` to `.gitignore` to prevent credential exposure.
 
 #### 5. Create Project Structure
 
 ```bash
-mkdir -p extract transform load
-touch extract/extract.py transform/transform.py load/load.py
-```
+mkdir -p etl_pipeline
+touch extract.py transform.py load.py
+````
 
 ---
 
 ## Project Structure
 
-```
-energy_billing/
-│
-├── extractor/
-│   └── extract.py           # Data extraction from Hugging Face
-│
-├── transformer/
-│   └── transform.py         # Data transformation and cleaning
-│
-├── postgres/
-│   └── load.py             # Data loading into PostgreSQL
-│
-│       
-├── .gitignore
-└── README.md            
-```
+````
 
 ---
 
 ## Pipeline Implementation
 
-### 1. Extract Stage (`extract/extract.py`)
+### 1. Extract Stage (`etl_pipeline/extract.py`)
 
 Fetches raw data from Hugging Face and saves locally.
 
-
-### 2. Transform Stage (`transform/transform.py`)
+### 2. Transform Stage (`etl_pipeline/transform.py`)
 
 Cleans and transforms raw data for analytics.
 
-### 3. Load Stage (`load/load.py`)
+### 3. Load Stage (`etl_pipeline/load.py`)
 
 Loads transformed data into PostgreSQL database.
 
@@ -187,14 +175,14 @@ Loads transformed data into PostgreSQL database.
 
 ```bash
 # Extract data
-python extract/extract.py
+python extract.py
 
 # Transform data
-python transform/transform.py
+python transform.py
 
 # Load data
-python load/load.py
-```
+python load.py
+````
 
 ---
 
