@@ -168,9 +168,6 @@ API_URL=https://huggingface.co/datasets/electricsheepafrica/nigerian_energy_and_
 # Create main pipeline directory
 mkdir -p etl_pipeline
 
-# Create data directories
-mkdir -p data/raw data/processed
-
 # Create pipeline scripts
 touch etl_pipeline/extract.py
 touch etl_pipeline/transform.py
@@ -185,19 +182,11 @@ touch etl_pipeline/load.py
 energy_billing/
 │
 ├── etl_pipeline/
-│   ├── __init__.
 │   ├── extract.py              
 │   ├── transform.py            
 │   └── load.py                 
-│
-├── data/
-│   ├── raw/                    
-│   └── processed/              
-│
 ├── assests/
-│   └── image-1.png            
-│
-├── .env                        
+│   └── image-1.png                                 
 ├── .gitignore
 └── README.md                   
 ```
