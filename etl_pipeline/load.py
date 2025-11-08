@@ -13,7 +13,7 @@ engine = create_engine(connection_string)
 df = pd.read_csv("nigerian_energy_and_utilities_billing_payments.csv")
 
 df.to_sql(
-    name='energy_man',
+    name='energy_billing',
     con=engine,
     if_exists='replace', 
     index=False
