@@ -205,7 +205,7 @@ Cleans and transforms raw data for analytics.
 
 ### 3. Load Stage (`etl_pipeline/load.py`)
 
-## Loads transformed data into PostgreSQL database.
+Loads transformed data into PostgreSQL database.
 
 ## Running the Pipeline
 
