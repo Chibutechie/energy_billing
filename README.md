@@ -177,16 +177,22 @@ touch etl_pipeline/load.py
 ```
 energy_billing/
 │
-├── etl_pipeline/
-│   ├── extract.py          # Stage 1: Fetch raw data from Hugging Face
-│   ├── transform.py        # Stage 2: Clean and validate data
-│   └── load.py             # Stage 3: Load data into PostgreSQL
+├── assests/
+│   └── image.png                                                               
+|
+├── data/
+│   └── nigerian_energy_and_utilities_billing_payments.csv 
+|
+|── sql_queries/
+│   └── energy_billing.sql  
+|
+├── src/
+│   ├── extract.py          
+│   ├── transform.py        
+│   ├── load.py             
+│   └── requirements.txt  
 │
-├── assets/
-│   └── architecture.png    # Pipeline architecture diagram
-│
-├── requirements.txt        # Python dependencies
-├── .env                    # Environment variables (not committed)
+├── venv                  
 ├── .gitignore
 └── README.md
 ```
@@ -230,28 +236,3 @@ python etl_pipeline/load.py
 ```
 
 ---
-
-## Acknowledgments
-
-- **[Electric Sheep Africa](https://huggingface.co/electricsheepafrica)** — for providing the comprehensive billing dataset
-- **[NERC](https://nerc.gov.ng/)** — Nigerian Electricity Regulatory Commission, for sector reports and guidance
-- Nigerian energy sector stakeholders working to improve data transparency
-
----
-
-## Additional Resources
-
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-- [Pandas User Guide](https://pandas.pydata.org/docs/user_guide/index.html)
-- [SQLAlchemy Tutorial](https://docs.sqlalchemy.org/en/20/tutorial/)
-- [python-dotenv Docs](https://pypi.org/project/python-dotenv/)
-- [NERC Sector Reports](https://nerc.gov.ng/)
-
----
-
-## Support
-
-For questions, issues, or contributions, reach out via:
-
-- 📧 Email: [chibuezeanalyst@gmail.com](mailto:chibuezeanalyst@gmail.com)
-- 🐛 Issues: Open a [GitHub Issue](https://github.com/your-username/energy_billing/issues)
