@@ -46,16 +46,9 @@ This pipeline addresses those challenges by providing stakeholders — utilities
 
 ## Architecture
 
-```
-┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
-│                 │       │                 │       │                 │
-│    EXTRACT      │──────▶│   TRANSFORM     │──────▶│      LOAD       │
-│                 │       │                 │       │                 │
-│  Hugging Face   │       │  Data Cleaning  │       │   PostgreSQL    │
-│   (Parquet)     │       │  Validation     │       │   (energydb)    │
-│                 │       │  Enrichment     │       │                 │
-└─────────────────┘       └─────────────────┘       └─────────────────┘
-```
+![Architecture](assests\image.png)
+
+````
 
 | Stage | Description |
 |---|---|
@@ -118,7 +111,7 @@ Ensure the following are installed on your system before proceeding:
 ```bash
 git clone https://github.com/your-username/energy_billing.git
 cd energy_billing
-```
+````
 
 **2. Create and activate a virtual environment**
 
@@ -280,4 +273,4 @@ For questions, issues, or contributions, reach out via:
 
 ---
 
-*Built with ❤️ for the Nigerian Energy Sector*
+_Built with ❤️ for the Nigerian Energy Sector_
