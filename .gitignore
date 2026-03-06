@@ -1,3 +1,4 @@
-.env
 test.pytest.py
 enhancement.txt
+config.bat
+node_modules
