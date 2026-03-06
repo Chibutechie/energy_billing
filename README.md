@@ -50,11 +50,11 @@ This pipeline addresses those challenges by providing stakeholders — utilities
 
 ---
 
-| Stage | Description |
-|---|---|
-| **Extract** | Fetches raw `.parquet` data from the Hugging Face dataset repository |
-| **Transform** | Cleans, validates, and structures data for analytics consumption |
-| **Load** | Writes transformed records into the `energydb` PostgreSQL database |
+| Stage         | Description                                                          |
+| ------------- | -------------------------------------------------------------------- |
+| **Extract**   | Fetches raw `.parquet` data from the Hugging Face dataset repository |
+| **Transform** | Cleans, validates, and structures data for analytics consumption     |
+| **Load**      | Writes transformed records into the `energydb` PostgreSQL database   |
 
 ---
 
@@ -64,32 +64,32 @@ This pipeline addresses those challenges by providing stakeholders — utilities
 
 ### Schema
 
-| Column | Type | Description |
-|---|---|---|
-| `customer_id` | String | Unique identifier for each customer |
-| `disco` | String | Distribution Company name |
-| `billing_month` | String | Month and year of the billing cycle |
-| `tariff_band` | String | Customer tariff classification |
-| `kwh` | Float | Kilowatt-hours consumed |
-| `price_ngn_kwh` | Float | Price per kWh in Nigerian Naira |
-| `amount_billed_ngn` | Float | Total amount billed |
-| `amount_paid_ngn` | Float | Total amount paid by customer |
-| `paid_on_time` | Boolean | Whether payment was made on time |
-| `arrears_ngn` | Float | Outstanding arrears amount |
+| Column              | Type    | Description                         |
+| ------------------- | ------- | ----------------------------------- |
+| `customer_id`       | String  | Unique identifier for each customer |
+| `disco`             | String  | Distribution Company name           |
+| `billing_month`     | String  | Month and year of the billing cycle |
+| `tariff_band`       | String  | Customer tariff classification      |
+| `kwh`               | Float   | Kilowatt-hours consumed             |
+| `price_ngn_kwh`     | Float   | Price per kWh in Nigerian Naira     |
+| `amount_billed_ngn` | Float   | Total amount billed                 |
+| `amount_paid_ngn`   | Float   | Total amount paid by customer       |
+| `paid_on_time`      | Boolean | Whether payment was made on time    |
+| `arrears_ngn`       | Float   | Outstanding arrears amount          |
 
 ---
 
 ## Technologies
 
-| Technology | Version | Purpose |
-|---|---|---|
-| [Python](https://www.python.org/downloads/) | 3.8+ | Core programming language |
-| [Pandas](https://pandas.pydata.org/) | 2.2.3 | Data manipulation and transformation |
-| [SQLAlchemy](https://www.sqlalchemy.org/) | 2.0.36 | Database ORM and connection management |
-| [PostgreSQL](https://www.postgresql.org/) | 18 | Data warehouse and analytics database |
-| [python-dotenv](https://pypi.org/project/python-dotenv/) | 1.0.1 | Environment variable management |
-| [Datasets](https://huggingface.co/docs/datasets/) | 2.19.0 | Hugging Face dataset library |
-| [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) | 2.9.9 | PostgreSQL adapter for Python |
+| Technology                                                   | Version | Purpose                                |
+| ------------------------------------------------------------ | ------- | -------------------------------------- |
+| [Python](https://www.python.org/downloads/)                  | 3.8+    | Core programming language              |
+| [Pandas](https://pandas.pydata.org/)                         | 2.2.3   | Data manipulation and transformation   |
+| [SQLAlchemy](https://www.sqlalchemy.org/)                    | 2.0.36  | Database ORM and connection management |
+| [PostgreSQL](https://www.postgresql.org/)                    | 18      | Data warehouse and analytics database  |
+| [python-dotenv](https://pypi.org/project/python-dotenv/)     | 1.0.1   | Environment variable management        |
+| [Datasets](https://huggingface.co/docs/datasets/)            | 2.19.0  | Hugging Face dataset library           |
+| [psycopg2-binary](https://pypi.org/project/psycopg2-binary/) | 2.9.9   | PostgreSQL adapter for Python          |
 
 ---
 
@@ -111,7 +111,7 @@ Ensure the following are installed on your system before proceeding:
 ```bash
 git clone https://github.com/your-username/energy_billing.git
 cd energy_billing
-````
+```
 
 **2. Create and activate a virtual environment**
 
