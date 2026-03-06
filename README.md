@@ -48,7 +48,7 @@ This pipeline addresses those challenges by providing stakeholders — utilities
 
 ![Architecture](assests\image.png)
 
-````
+---
 
 | Stage | Description |
 |---|---|
