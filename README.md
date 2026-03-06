@@ -46,7 +46,7 @@ This pipeline addresses those challenges by providing stakeholders — utilities
 
 ## Architecture
 
-![Architecture](assests\image.png)
+![Architecture](assests/image.png)
 
 ---
 
@@ -231,21 +231,6 @@ python etl_pipeline/load.py
 
 ---
 
-## Roadmap
-
-Planned enhancements for future releases:
-
-- [ ] Data validation tests
-- [ ] Incremental loading support
-- [ ] Interactive dashboard with Plotly / Streamlit
-- [ ] Automated scheduling with Apache Airflow
-- [ ] Data quality monitoring and alerting
-- [ ] REST API endpoint for real-time queries
-- [ ] Docker containerization for easy deployment
-- [ ] Unit and integration test coverage
-
----
-
 ## Acknowledgments
 
 - **[Electric Sheep Africa](https://huggingface.co/electricsheepafrica)** — for providing the comprehensive billing dataset
@@ -270,7 +255,3 @@ For questions, issues, or contributions, reach out via:
 
 - 📧 Email: [chibuezeanalyst@gmail.com](mailto:chibuezeanalyst@gmail.com)
 - 🐛 Issues: Open a [GitHub Issue](https://github.com/your-username/energy_billing/issues)
-
----
-
-_Built with ❤️ for the Nigerian Energy Sector_
